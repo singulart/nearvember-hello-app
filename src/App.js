@@ -1,21 +1,13 @@
 import 'regenerator-runtime/runtime';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Big from 'big.js';
 import Form from './components/Form';
 import SignIn from './components/SignIn';
 import Messages from './components/Messages';
 
-const SUGGESTED_DONATION = '0';
-const BOATLOAD_OF_GAS = Big(3).times(10 ** 13).toFixed();
-
 const App = ({ contract, currentUser, nearConfig, wallet }) => {
   const [messages, setMessages] = useState([]);
 
-  useEffect(() => {
-    // TODO: don't just fetch once; subscribe!
-    // contract.getMessages().then(setMessages);
-  }, []);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -24,16 +16,10 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
 
     fieldset.disabled = true;
 
-    // TODO: optimistically update page with new message,
-    // update blockchain data in background
-    // add uuid to each message, so we know which one is already known
     contract.get_greeting(
       { account_id: 'isonar.testnet' }
     ).then((greeting) => {
       setMessages(greeting);
-      // contract.getMessages().then(messages => {
-      //   setMessages(messages);
-      // });
     });
   };
 
