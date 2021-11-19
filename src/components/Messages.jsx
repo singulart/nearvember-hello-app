@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 export default function Messages({ messages }) {
   return (
     <>
-      <h2 className='is-premium'>And the Blockchain said:</h2>
-        <p className='is-premium'>
+      <h2>And the Blockchain said:</h2>
+        <p>
           <strong>{messages}</strong>
         </p>
     </>

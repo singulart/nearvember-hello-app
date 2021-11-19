@@ -45,11 +45,11 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
           : <button onClick={signIn}>Wanna to say hello blockchain-style? Log in!</button>
         }
       </header>
+      { !!currentUser && !!messages.length && <Messages messages={messages}/> }
       { currentUser
         ? <Form onSubmit={onSubmit} currentUser={currentUser} />
         : <SignIn/>
       }
-      { !!currentUser && !!messages.length && <Messages messages={messages}/> }
     </main>
   );
 };
