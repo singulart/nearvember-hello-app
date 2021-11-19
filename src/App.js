@@ -14,7 +14,7 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
 
   useEffect(() => {
     // TODO: don't just fetch once; subscribe!
-    contract.getMessages().then(setMessages);
+    // contract.getMessages().then(setMessages);
   }, []);
 
   const onSubmit = (e) => {
@@ -27,25 +27,21 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
     // TODO: optimistically update page with new message,
     // update blockchain data in background
     // add uuid to each message, so we know which one is already known
-    contract.addMessage(
-      { text: message.value },
-      BOATLOAD_OF_GAS,
-      Big(donation.value || '0').times(10 ** 24).toFixed()
-    ).then(() => {
-      contract.getMessages().then(messages => {
-        setMessages(messages);
-        message.value = '';
-        donation.value = SUGGESTED_DONATION;
-        fieldset.disabled = false;
-        message.focus();
-      });
+    contract.get_greeting(
+      { account_id: 'isonar.testnet' }
+    ).then((greeting) => {
+      setMessages(greeting);
+      // contract.getMessages().then(messages => {
+      //   setMessages(messages);
+      // });
     });
   };
 
   const signIn = () => {
+    console.log(nearConfig.contractName);
     wallet.requestSignIn(
       nearConfig.contractName,
-      'NEAR Guest Book'
+      'NEARvember'
     );
   };
 
@@ -57,10 +53,10 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
   return (
     <main>
       <header>
-        <h1>NEAR Guest Book</h1>
+        <h1>NEARvember Day 3 Challenge</h1>
         { currentUser
-          ? <button onClick={signOut}>Log out</button>
-          : <button onClick={signIn}>Log in</button>
+          ? <button onClick={signOut}>I'm done with this. Log me out</button>
+          : <button onClick={signIn}>Wanna to say hello blockchain-style? Log in!</button>
         }
       </header>
       { currentUser
@@ -73,10 +69,6 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
 };
 
 App.propTypes = {
-  contract: PropTypes.shape({
-    addMessage: PropTypes.func.isRequired,
-    getMessages: PropTypes.func.isRequired
-  }).isRequired,
   currentUser: PropTypes.shape({
     accountId: PropTypes.string.isRequired,
     balance: PropTypes.string.isRequired
