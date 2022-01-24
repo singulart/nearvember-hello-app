@@ -1182,15 +1182,6 @@
     slash "^3.0.0"
     strip-ansi "^6.0.0"
 
-"@jest/environment@^26.6.2":
-  version "26.6.2"
-  resolved "https://registry.npmjs.org/@jest/environment/-/environment-26.6.2.tgz"
-  dependencies:
-    "@jest/fake-timers" "^26.6.2"
-    "@jest/types" "^26.6.2"
-    "@types/node" "*"
-    jest-mock "^26.6.2"
-
 "@jest/environment@^27.4.6":
   version "27.4.6"
   resolved "https://registry.yarnpkg.com/@jest/environment/-/environment-27.4.6.tgz#1e92885d64f48c8454df35ed9779fbcf31c56d8b"
@@ -1199,17 +1190,6 @@
     "@jest/types" "^27.4.2"
     "@types/node" "*"
     jest-mock "^27.4.6"
-
-"@jest/fake-timers@^26.6.2":
-  version "26.6.2"
-  resolved "https://registry.npmjs.org/@jest/fake-timers/-/fake-timers-26.6.2.tgz"
-  dependencies:
-    "@jest/types" "^26.6.2"
-    "@sinonjs/fake-timers" "^6.0.1"
-    "@types/node" "*"
-    jest-message-util "^26.6.2"
-    jest-mock "^26.6.2"
-    jest-util "^26.6.2"
 
 "@jest/fake-timers@^27.4.6":
   version "27.4.6"
@@ -1520,12 +1500,6 @@
   resolved "https://registry.npmjs.org/@sinonjs/commons/-/commons-1.7.2.tgz"
   dependencies:
     type-detect "4.0.8"
-
-"@sinonjs/fake-timers@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.npmjs.org/@sinonjs/fake-timers/-/fake-timers-6.0.1.tgz"
-  dependencies:
-    "@sinonjs/commons" "^1.7.0"
 
 "@sinonjs/fake-timers@^8.0.1":
   version "8.1.0"
@@ -5022,17 +4996,6 @@ jest-environment-jsdom@^27.4.6:
     jest-util "^27.4.2"
     jsdom "^16.6.0"
 
-jest-environment-node@^26.6.2:
-  version "26.6.2"
-  resolved "https://registry.npmjs.org/jest-environment-node/-/jest-environment-node-26.6.2.tgz"
-  dependencies:
-    "@jest/environment" "^26.6.2"
-    "@jest/fake-timers" "^26.6.2"
-    "@jest/types" "^26.6.2"
-    "@types/node" "*"
-    jest-mock "^26.6.2"
-    jest-util "^26.6.2"
-
 jest-environment-node@^27.0.6, jest-environment-node@^27.4.6:
   version "27.4.6"
   resolved "https://registry.yarnpkg.com/jest-environment-node/-/jest-environment-node-27.4.6.tgz#ee8cd4ef458a0ef09d087c8cd52ca5856df90242"
@@ -5125,20 +5088,6 @@ jest-matcher-utils@^27.4.6:
     jest-get-type "^27.4.0"
     pretty-format "^27.4.6"
 
-jest-message-util@^26.6.2:
-  version "26.6.2"
-  resolved "https://registry.npmjs.org/jest-message-util/-/jest-message-util-26.6.2.tgz"
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@jest/types" "^26.6.2"
-    "@types/stack-utils" "^2.0.0"
-    chalk "^4.0.0"
-    graceful-fs "^4.2.4"
-    micromatch "^4.0.2"
-    pretty-format "^26.6.2"
-    slash "^3.0.0"
-    stack-utils "^2.0.2"
-
 jest-message-util@^27.4.6:
   version "27.4.6"
   resolved "https://registry.yarnpkg.com/jest-message-util/-/jest-message-util-27.4.6.tgz#9fdde41a33820ded3127465e1a5896061524da31"
@@ -5152,13 +5101,6 @@ jest-message-util@^27.4.6:
     pretty-format "^27.4.6"
     slash "^3.0.0"
     stack-utils "^2.0.3"
-
-jest-mock@^26.6.2:
-  version "26.6.2"
-  resolved "https://registry.npmjs.org/jest-mock/-/jest-mock-26.6.2.tgz"
-  dependencies:
-    "@jest/types" "^26.6.2"
-    "@types/node" "*"
 
 jest-mock@^27.4.6:
   version "27.4.6"
@@ -7028,15 +6970,6 @@ prepend-http@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/prepend-http/-/prepend-http-2.0.0.tgz"
 
-pretty-format@^26.6.2:
-  version "26.6.2"
-  resolved "https://registry.npmjs.org/pretty-format/-/pretty-format-26.6.2.tgz"
-  dependencies:
-    "@jest/types" "^26.6.2"
-    ansi-regex "^5.0.0"
-    ansi-styles "^4.0.0"
-    react-is "^17.0.1"
-
 pretty-format@^27.4.6:
   version "27.4.6"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-27.4.6.tgz#1b784d2f53c68db31797b2348fa39b49e31846b7"
@@ -7822,12 +7755,6 @@ sshpk@^1.7.0:
 stable@^0.1.8:
   version "0.1.8"
   resolved "https://registry.npmjs.org/stable/-/stable-0.1.8.tgz"
-
-stack-utils@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/stack-utils/-/stack-utils-2.0.2.tgz"
-  dependencies:
-    escape-string-regexp "^2.0.0"
 
 stack-utils@^2.0.3:
   version "2.0.5"
